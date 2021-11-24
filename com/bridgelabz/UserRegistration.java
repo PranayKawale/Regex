@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.regex.*;
 
 public class UserRegistration {
-	Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 	public void checkFirstName(){
 		System.out.print("Enter First Name of User: " );
 		String  fName = sc.next();
@@ -13,9 +13,8 @@ public class UserRegistration {
 			System.out.println("Perfect! First #Name");
 		else
 			System.out.println("Please Enter a valid First Name");
-	}
+	} 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		UserRegistration user = new UserRegistration();
 
 		System.out.println("Welcome to User Registration Program");
