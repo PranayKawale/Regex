@@ -45,6 +45,16 @@ public class UserRegistration {
         else
             System.out.println("Please Enter a Valid Mobile Num ex:- 90 9533182605");
     }
+    public void checkPassWordRule1(){
+       
+        System.out.print("Enter password :  ");
+        String password = sc.nextLine();
+        boolean check = Pattern.matches("[a-zA-Z]{8,}", password);
+        if (check)
+            System.out.println("Perfect! #password");
+        else
+            System.out.println("Please Enter a Valid password, it should have minimum 8 characters");
+    }
 	public static void main(String[] args) {
 		UserRegistration user = new UserRegistration();
 
@@ -54,6 +64,7 @@ public class UserRegistration {
 		user.checkLastName();
 		user.enterValidEmail();
 		user.validMobileNum();
+		user.checkPassWordRule1();
 	}
 }
 
