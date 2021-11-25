@@ -66,7 +66,7 @@ public class UserRegistration {
             System.out.println("Please Enter a Valid password, it should have minimum 8 characters with 1 upper case");
     }
     public void checkPassWordRule3(){
-        Scanner sc = new Scanner(System.in);
+      
         System.out.print("Enter password :  ");
         String passWord = sc.nextLine();
         boolean check = Pattern.matches("[A-Z]{1}[a-z]{6,}[0-9]{1}", passWord);
@@ -75,6 +75,17 @@ public class UserRegistration {
         else
             System.out.println("Please Enter a Valid password, it should have minimum 8 characters with, 1 upper case and 1 Numeric ");
     }
+    public void checkPassWordRule4(){
+       
+        System.out.print("Enter password :  ");
+        String passWord = sc.nextLine();
+        boolean check = Pattern.matches("[A-Z]{1}[a-z]{5,}[0-9]{1}[!@#$%^&*~]{1}", passWord);
+        if (check)
+            System.out.println("Perfect! #password");
+        else
+            System.out.println("Please Enter a Valid password, it should have minimum 8 characters with, 1 upper case, 1 Numeric and 1 Special Char ");
+    }
+
 
 	public static void main(String[] args) {
 		UserRegistration user = new UserRegistration();
@@ -88,6 +99,7 @@ public class UserRegistration {
 		user.checkPassWordRule1();
 		user.checkPassWordRule2();
 		user.checkPassWordRule3();
+		user.checkPassWordRule4();
 	}
 }
 
